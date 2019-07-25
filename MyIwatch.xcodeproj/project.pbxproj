@@ -22,6 +22,8 @@
 		1A8A74B322E6A69E006EA35F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A74B222E6A69E006EA35F /* ExtensionDelegate.swift */; };
 		1A8A74B522E6A69E006EA35F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A74B422E6A69E006EA35F /* NotificationController.swift */; };
 		1A8A74B722E6A69F006EA35F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A74B622E6A69F006EA35F /* Assets.xcassets */; };
+		1ACB2B9422E85965008FB9AA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACB2B9322E85965008FB9AA /* HealthKit.framework */; };
+		1ACB2B9722E85AA5008FB9AA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACB2B9622E85AA5008FB9AA /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,10 @@
 		1A8A74B622E6A69F006EA35F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A8A74B822E6A69F006EA35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A8A74B922E6A69F006EA35F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		1ACB2B9322E85965008FB9AA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1ACB2B9522E85965008FB9AA /* MyIwatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyIwatch.entitlements; sourceTree = "<group>"; };
+		1ACB2B9622E85AA5008FB9AA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		1ACB2B9822E85AA5008FB9AA /* MyIwatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyIwatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACB2B9422E85965008FB9AA /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACB2B9722E85AA5008FB9AA /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +156,7 @@
 				1A8A74A022E6A69D006EA35F /* MyIwatch WatchKit App */,
 				1A8A74AF22E6A69E006EA35F /* MyIwatch WatchKit Extension */,
 				1A8A747522E6A69A006EA35F /* Products */,
+				1ACB2B9222E85965008FB9AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +175,7 @@
 		1A8A747622E6A69A006EA35F /* MyIwatch */ = {
 			isa = PBXGroup;
 			children = (
+				1ACB2B9522E85965008FB9AA /* MyIwatch.entitlements */,
 				1A8A747722E6A69A006EA35F /* AppDelegate.swift */,
 				1A8A747922E6A69A006EA35F /* ViewController.swift */,
 				1A8A747B22E6A69A006EA35F /* Main.storyboard */,
@@ -207,6 +217,7 @@
 		1A8A74AF22E6A69E006EA35F /* MyIwatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1ACB2B9822E85AA5008FB9AA /* MyIwatch WatchKit Extension.entitlements */,
 				1A8A74B022E6A69E006EA35F /* InterfaceController.swift */,
 				1A8A74B222E6A69E006EA35F /* ExtensionDelegate.swift */,
 				1A8A74B422E6A69E006EA35F /* NotificationController.swift */,
@@ -215,6 +226,15 @@
 				1A8A74B922E6A69F006EA35F /* PushNotificationPayload.apns */,
 			);
 			path = "MyIwatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		1ACB2B9222E85965008FB9AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ACB2B9622E85AA5008FB9AA /* HealthKit.framework */,
+				1ACB2B9322E85965008FB9AA /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +341,11 @@
 				TargetAttributes = {
 					1A8A747322E6A69A006EA35F = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					1A8A748722E6A69D006EA35F = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -335,6 +360,11 @@
 					};
 					1A8A74AA22E6A69E006EA35F = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -525,7 +555,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Lucy PermataSari (95KY4B9C4L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -586,7 +616,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Lucy PermataSari (95KY4B9C4L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -613,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "MyIwatch WatchKit Extension/MyIwatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YA9963XF2B;
 				INFOPLIST_FILE = "MyIwatch WatchKit Extension/Info.plist";
@@ -635,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "MyIwatch WatchKit Extension/MyIwatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YA9963XF2B;
 				INFOPLIST_FILE = "MyIwatch WatchKit Extension/Info.plist";
@@ -695,6 +727,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyIwatch/MyIwatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YA9963XF2B;
 				INFOPLIST_FILE = MyIwatch/Info.plist;
@@ -704,6 +738,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Cy.MyIwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -713,6 +748,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyIwatch/MyIwatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YA9963XF2B;
 				INFOPLIST_FILE = MyIwatch/Info.plist;
@@ -722,6 +759,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Cy.MyIwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
