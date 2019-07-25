@@ -30,11 +30,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFM-zc-4cy">
+                                <rect key="frame" x="191.5" y="492" width="31" height="30"/>
+                                <state key="normal" title="FIRE"/>
+                                <connections>
+                                    <action selector="sendNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gea-H6-gUM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="EFM-zc-4cy" firstAttribute="centerX" secondItem="Uee-0j-aNJ" secondAttribute="centerX" id="0Hu-cX-7Jn"/>
                             <constraint firstItem="QzM-Xn-LHi" firstAttribute="centerX" secondItem="Uee-0j-aNJ" secondAttribute="centerX" constant="-50" id="Fsa-EE-7ql"/>
                             <constraint firstItem="Htc-hN-pyZ" firstAttribute="centerX" secondItem="Uee-0j-aNJ" secondAttribute="centerX" constant="50" id="JQj-se-Dil"/>
+                            <constraint firstItem="EFM-zc-4cy" firstAttribute="top" secondItem="QzM-Xn-LHi" secondAttribute="bottom" constant="28.5" id="gQK-hb-ye8"/>
                             <constraint firstItem="Htc-hN-pyZ" firstAttribute="centerY" secondItem="Uee-0j-aNJ" secondAttribute="centerY" id="vQl-WR-aE1"/>
                             <constraint firstItem="QzM-Xn-LHi" firstAttribute="centerY" secondItem="Uee-0j-aNJ" secondAttribute="centerY" id="weI-WX-B3f"/>
                         </constraints>
