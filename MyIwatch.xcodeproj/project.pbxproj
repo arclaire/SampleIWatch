@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0BC6B022E9C1D400DD411E /* ServiceNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0BC6AF22E9C1D400DD411E /* ServiceNotifications.swift */; };
 		1A8A747822E6A69A006EA35F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A747722E6A69A006EA35F /* AppDelegate.swift */; };
 		1A8A747A22E6A69A006EA35F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A747922E6A69A006EA35F /* ViewController.swift */; };
 		1A8A747D22E6A69A006EA35F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A747B22E6A69A006EA35F /* Main.storyboard */; };
@@ -83,11 +84,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A0BC6AF22E9C1D400DD411E /* ServiceNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNotifications.swift; sourceTree = "<group>"; };
 		1A8A747422E6A69A006EA35F /* MyIwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyIwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A8A747722E6A69A006EA35F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A8A747922E6A69A006EA35F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A8A747C22E6A69A006EA35F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1A8A747E22E6A69D006EA35F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A8A747E22E6A69D006EA35F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyIwatch/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		1A8A748122E6A69D006EA35F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A8A748322E6A69D006EA35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A8A748822E6A69D006EA35F /* MyIwatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyIwatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 				1A8A747E22E6A69D006EA35F /* Assets.xcassets */,
 				1A8A748022E6A69D006EA35F /* LaunchScreen.storyboard */,
 				1A8A748322E6A69D006EA35F /* Info.plist */,
+				1A0BC6AF22E9C1D400DD411E /* ServiceNotifications.swift */,
 			);
 			path = MyIwatch;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			files = (
 				1A8A747A22E6A69A006EA35F /* ViewController.swift in Sources */,
 				1A8A747822E6A69A006EA35F /* AppDelegate.swift in Sources */,
+				1A0BC6B022E9C1D400DD411E /* ServiceNotifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

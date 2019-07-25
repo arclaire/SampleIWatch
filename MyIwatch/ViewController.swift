@@ -12,7 +12,7 @@ import UserNotifications
 class ViewController: UIViewController {
 
     let sharedDefaults =
-        UserDefaults(suiteName: "Cy.MyIwatch")
+        UserDefaults(suiteName: "UserInfo")
     
     var appDelegate = UIApplication.shared.delegate as? AppDelegate
     

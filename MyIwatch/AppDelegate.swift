@@ -93,9 +93,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         content.badge = 1
         content.categoryIdentifier = categoryIdentifire
         let imageName = "logoApps"
-       // let imageURL = Bundle.main.url(forResource: imageName, withExtension: "png")!
-        //let attachment = try! UNNotificationAttachment(identifier: imageName, url: imageURL, options: .none)
-        //content.attachments = [attachment]
+        let imageURL = Bundle.main.url(forResource: imageName, withExtension: "png")!
+        let attachment = try! UNNotificationAttachment(identifier: imageName, url: imageURL, options: .none)
+        content.attachments = [attachment]
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let identifier = "Local Notification"
